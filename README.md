@@ -28,6 +28,7 @@ This project was developed by:
 
 | Name | Role |
 |------|------|
+| Tahir Azad | Co-leader |
 | Misbah ul Haq | Developer |
 
 ## 🚀 Getting Started
