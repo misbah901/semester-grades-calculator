@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f7f7f2;
+  --foreground: #13212f;
+  --panel: rgba(255, 251, 245, 0.88);
+  --panel-border: rgba(19, 33, 47, 0.08);
+  --shadow: 0 26px 70px rgba(19, 33, 47, 0.12);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(255, 176, 122, 0.24), transparent 24%),
+    radial-gradient(circle at top right, rgba(85, 171, 214, 0.2), transparent 28%),
+    linear-gradient(180deg, #fbfaf6 0%, #edf2f0 100%);
+  color: var(--foreground);
+  font-family: "Avenir Next", "Trebuchet MS", sans-serif;
+}
+
+.glass-panel {
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(16px);
+}
+
+.headline-font {
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.soft-scrollbar::-webkit-scrollbar {
+  width: 9px;
+}
+
+.soft-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.soft-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(17, 32, 51, 0.16);
+  border-radius: 999px;
+}
+
+.entry-rise {
+  animation: entry-rise 360ms ease both;
+}
+
+.mobile-safe {
+  padding-bottom: max(1.5rem, env(safe-area-inset-bottom));
+}
+
+@keyframes entry-rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
